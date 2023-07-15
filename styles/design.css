@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: hsl(235, 18%, 26%);
+    --card-back: hsl(0, 0%, 100%);
+    --paragraph-color: hsl(234, 29%, 20%);
+    --placeholder-color: hsl(231, 7%, 60%);
+    --pragraph-font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto';
+    background: var(--primary-color);
+}
+
+.whole-wrapper {
+    max-width: 950px;
+    margin: 100px auto;
+}
+
+.card {
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    background: var(--card-back);
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 0%;
+    color: var(--paragraph-color);
+}
+
+a {
+    color: var(--paragraph-color);
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 50px;
+    width: 360px;
+    font-size: var(--pragraph-font-size);
+    color: var(--paragraph-color);
+}
+
+form {
+    display: grid;
+    margin-top: 50px;
+}
+
+label {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--paragraph-color);
+}
+
+input {
+    margin-bottom: 28px;
+    padding: 18px;
+    border: 2px solid #c8c8c8;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+    font-size: 16px;
+}
+
+.btn {
+    padding: 18px;
+    font-weight: 700;
+    color: var(--card-back);
+    background: var(--paragraph-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.left-side {
+    padding: 50px 20px;
+}
+
+.right-side .mobile-img {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+
+    .whole-wrapper {
+        margin: 0;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        position: relative;
+        border-radius: 0;
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        margin-top: 0px;
+        font-size: 2.5em;
+    }
+
+    p{
+        font-size: 14px;
+        width: 265px;
+    }
+
+    .right-side .mobile-img{
+        display: contents;
+    }
+
+    .right-side .mobile-img img {
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .right-side .desktop-img {
+        display: none;
+    }
+}
